@@ -85,10 +85,13 @@ button:focus-visible {
 main {
   max-width: 600px;
   margin: auto auto;
+  background-color: #DBDBDB;
+  height: max-content;
 
   @media (min-width: 1001px) {
     max-width: 990px;
   }
+
 
 }
 
@@ -227,4 +230,46 @@ main {
     }
   }
 
+}
+
+.homeTitle {
+  margin-bottom: 30px;
+}
+
+.project_container {
+  color:#262626;
+  a {
+    color:unset;
+  }
+
+  display: flex-column;
+  margin: 0px auto 80px;
+
+  .project_name {
+    font-size: 2rem;
+    font-family: "Mystery";
+  }
+
+  .project_des_img {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1rem;
+
+    .project_description {
+      grid-column: 1 / 6;
+      white-space: pre-line;
+    }
+
+    .project_link {
+      grid-column: 6 / -1;
+    }
+  }
+}
+
+.project_detail_container {
+  
+  .project_detail_title {
+    font-size: 3rem;
+    font-family: "Mystery";
+  }
 }

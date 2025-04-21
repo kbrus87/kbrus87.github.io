@@ -6,6 +6,7 @@ import Donate from "./pages/Donate";
 import { useState } from "react";
 import Navigation from "./components/Navigation";
 import UserStatus from "./components/UserStatus";
+import MidiRouter from "./pages/MidiRouter";
 
 export default function App() {
   const [user, setUser] = useState(null);
@@ -17,7 +18,7 @@ export default function App() {
   return (
     <div className="min-w-screen min-h-screen bg-gray-50 text-gray-900">
       <header className="Header flex justify-between items-center">
-        <h5 className="Logo text-xl font-bold">KBrus Github Page</h5>
+        <h5 className="Logo font-bold">KBrus Github Page</h5>
 
         <div className="Options">
           <Navigation />
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/donate" element={<Donate />} />
+          <Route path="/midirouter" element={<MidiRouter />} />
         </Routes>
       </main>
     </div>
