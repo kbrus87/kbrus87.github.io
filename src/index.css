@@ -263,7 +263,13 @@ main {
       flex-direction: column;
 
       .project_download {
-        a {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .project_download-button {
+          cursor: pointer;
+          width: fit-content;
 
           display: flex;
           justify-content: flex-end;
@@ -276,8 +282,6 @@ main {
 
           .project_download_file_icon {
             color: #9a54b0;
-
-
           }
 
           &:hover {
@@ -299,6 +303,15 @@ main {
 
     .project_link {
       grid-column: 6 / -1;
+    }
+
+    @media (max-width: 1001px) {
+      display: flex;
+      flex-direction: column-reverse;
+
+      .project_link {
+        margin-bottom: 0.5rem;
+      }
     }
   }
 }

@@ -3,20 +3,19 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Donate from "./pages/Donate";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import Navigation from "./components/Navigation";
-import UserStatus from "./components/UserStatus";
+// import UserStatus from "./components/UserStatus";
 import MidiRouter from "./pages/MidiRouter";
 
 import { MyContext } from "./context/Context";
 
 export default function App() {
-  const [user, setUser] = useState(null);
+  //const [user, setUser] = useState(null);
   const { loading } = useContext(MyContext);
-  const handleLogin = () => {
-    // placeholder login logic
-    setUser({ name: "Bruno Javier Ramari" });
-  };
+  // const handleLogin = () => {
+  //   setUser({ name: "Bruno Javier Ramari" });
+  // };
 
   return (
     <div className="min-w-screen min-h-screen bg-gray-50 text-gray-900">
@@ -25,7 +24,6 @@ export default function App() {
 
         <div className="Options">
           <Navigation />
-          <UserStatus user={user} handleLogin={handleLogin} />
         </div>
       </header>
 
