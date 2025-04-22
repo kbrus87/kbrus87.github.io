@@ -237,9 +237,10 @@ main {
 }
 
 .project_container {
-  color:#262626;
+  color: #262626;
+
   a {
-    color:unset;
+    color: unset;
   }
 
   display: flex-column;
@@ -258,6 +259,42 @@ main {
     .project_description {
       grid-column: 1 / 6;
       white-space: pre-line;
+      display: flex;
+      flex-direction: column;
+
+      .project_download {
+        a {
+
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+
+          font-family: 'Mystery';
+          font-size: 1rem;
+          margin-top: 0.75rem;
+          color: #9a54b0;
+
+          .project_download_file_icon {
+            color: #9a54b0;
+
+
+          }
+
+          &:hover {
+            color: #a105d0;
+
+            .project_download_file_icon {
+              color: #a105d0
+            }
+          }
+
+          p {
+            margin: 0 0.5rem;
+            padding: 0;
+          }
+
+        }
+      }
     }
 
     .project_link {
@@ -267,7 +304,7 @@ main {
 }
 
 .project_detail_container {
-  
+
   .project_detail_title {
     font-size: 3rem;
     font-family: "Mystery";

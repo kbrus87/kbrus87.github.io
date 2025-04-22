@@ -3,13 +3,16 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Donate from "./pages/Donate";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Navigation from "./components/Navigation";
 import UserStatus from "./components/UserStatus";
 import MidiRouter from "./pages/MidiRouter";
 
+import { MyContext } from "./context/Context";
+
 export default function App() {
   const [user, setUser] = useState(null);
+  const { loading } = useContext(MyContext);
   const handleLogin = () => {
     // placeholder login logic
     setUser({ name: "Bruno Javier Ramari" });
@@ -27,12 +30,16 @@ export default function App() {
       </header>
 
       <main className="p-6">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/donate" element={<Donate />} />
-          <Route path="/midirouter" element={<MidiRouter />} />
-        </Routes>
+        {loading ? (
+          <div>loading ...</div>
+        ) : (
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/donate" element={<Donate />} />
+            <Route path="/midirouter" element={<MidiRouter />} />
+          </Routes>
+        )}
       </main>
     </div>
   );
