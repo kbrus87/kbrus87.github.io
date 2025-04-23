@@ -9,7 +9,7 @@ export default function Home() {
       <h2 className="homeTitle text-5xl font-bold mb-4">
         Welcome to My Projects
       </h2>
-      {projects.map((p) => {
+      {projects?.map((p) => {
         const mainImageUrl = p.mainImageUrl.includes("http")
           ? p.mainImageUrl
           : api + p.mainImageUrl;

@@ -9,8 +9,6 @@ export function MyProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const [projects, setProjects] = useState([]);
 
-  console.log(api);
-
   useEffect(() => {
     axios.get(api + "/projects").then((res) => {
       setProjects(res.data);
