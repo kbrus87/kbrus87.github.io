@@ -14,7 +14,9 @@ export function MyProvider({ children }) {
       setProjects(res.data);
     });
 
-    setLoading(false);
+    setTimeout(() => {
+      setLoading(false);
+    }, 850); 
   }, [api]);
 
   return (

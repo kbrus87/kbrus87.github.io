@@ -7,6 +7,7 @@ import { useContext } from "react";
 import Navigation from "./components/Navigation";
 // import UserStatus from "./components/UserStatus";
 import MidiRouter from "./pages/MidiRouter";
+import AwesomSpinner from "./components/AwesomSpinner";
 
 import { MyContext } from "./context/Context";
 
@@ -18,7 +19,7 @@ export default function App() {
   // };
 
   return (
-    <div className="min-w-screen min-h-screen bg-gray-50 text-gray-900">
+    <div className="min-w-screen min-h-screen text-gray-900">
       <header className="Header flex justify-between items-center">
         <h5 className="Logo font-bold">KBrus Github Page</h5>
 
@@ -29,7 +30,7 @@ export default function App() {
 
       <main className="p-6">
         {loading ? (
-          <div>loading ...</div>
+          <AwesomSpinner />
         ) : (
           <Routes>
             <Route path="/" element={<Home />} />

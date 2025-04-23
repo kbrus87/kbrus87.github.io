@@ -39,6 +39,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  
 }
 
 h1 {
@@ -70,7 +71,7 @@ button:focus-visible {
 @media (prefers-color-scheme: dark) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #242424;
   }
 
   a:hover {
@@ -322,4 +323,9 @@ main {
     font-size: 3rem;
     font-family: "Mystery";
   }
+}
+
+
+.font-audiowide{
+  font-family: 'Audiowide', sans-serif;
 }
