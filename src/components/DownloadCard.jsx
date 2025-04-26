@@ -15,7 +15,7 @@ const DownloadCard = ({ project, download }) => {
     };
 
     return (
-        <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm mx-auto">
+        <div style={{width:"400px"}} className="bg-white p-6 rounded-lg shadow-lg max-w-sm">
             <div className="mb-4">
                 <button onClick={handleDownload} style={{ backgroundColor: "purple" }} className="bg-blue-500 text-white py-2 px-4 rounded-full flex items-center gap-2 w-full">
                     <HiDownload />
