@@ -10,14 +10,15 @@ import MidiRouter from "./pages/MidiRouter";
 import AwesomSpinner from "./components/AwesomSpinner";
 
 import { MyContext } from "./context/Context";
+import ProjectContent from "./pages/Project";
 
 export default function App() {
   //const [user, setUser] = useState(null);
-  const { loading } = useContext(MyContext);
   // const handleLogin = () => {
   //   setUser({ name: "Bruno Javier Ramari" });
   // };
 
+  const { loading } = useContext(MyContext);
   return (
     <div className="min-w-screen min-h-screen text-gray-900">
       <header className="Header flex justify-between items-center">
@@ -36,7 +37,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/donate" element={<Donate />} />
-            <Route path="/midirouter" element={<MidiRouter />} />
+            <Route path="/project/:project_id" element={<ProjectContent />} />
           </Routes>
         )}
       </main>

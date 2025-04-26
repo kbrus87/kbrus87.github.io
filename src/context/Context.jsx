@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect, useCallback } from "react";
 import axios from "axios";
 // Crear el contexto solo una vez
 export const MyContext = createContext();
@@ -16,12 +16,27 @@ export function MyProvider({ children }) {
 
     setTimeout(() => {
       setLoading(false);
-    }, 850); 
-  }, [api]);
+    }, 850);
+
+  }, []);
+
+  const getContent = async (id) => {
+    return axios.post(api + "/projects/content/" + id).then((res) => {
+      return res.data
+    })
+  }
+
+  const setLoadingFalseWithDelay = (setLoading) => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 850)
+  }
+
 
   return (
-    <MyContext.Provider value={{ projects, loading, api }}>
+    <MyContext.Provider value={{ projects, loading, api, getContent, setLoadingFalseWithDelay }}>
       {children}
     </MyContext.Provider>
   );
 }
+

@@ -21,7 +21,7 @@ export default function Home() {
             description={p.description}
             name={p.name}
             image={mainImageUrl}
-            link={p.link}
+            link={`/project/${p.id}`}
             download={download}
           />
         );

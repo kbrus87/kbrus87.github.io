@@ -16,11 +16,11 @@ axios.interceptors.request.use((request) => {
 });
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  
     <Router>
       <MyProvider>
         <App />
       </MyProvider>
     </Router>
-  </React.StrictMode>
+ 
 );
