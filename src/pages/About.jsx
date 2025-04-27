@@ -2,7 +2,7 @@ export default function About() {
   return (
     <section>
       <h2 className="text-2xl font-bold mb-4">About KBrus</h2>
-      <p>I'm a Musician, Engineer and Programmer (in that order) and out of boredom, curiosity and the crave of doing something remotely meaningful for me and anyone out there, i've created this place to post the projects I care about and hopefully wil help someone achieve something.</p>
+      <p>I'm a musician, engineer, and programmer (in that order). Out of boredom, curiosity, and the desire to do something remotely meaningful for both myself and anyone out there, I created this space to share the projects I care about, hoping that they will help someone achieve something.</p>
       <br />
       <hr />
       <br />
