@@ -15,6 +15,7 @@ export default {
       },
       safelist: [
         "mb-5",
+        "lg:flex",
         "lg:mb-auto",
         "lg:flex-row",
         "flex-col-reverse",

@@ -45,7 +45,7 @@ export default function ProjectBlock({
               <p>Download</p>
             </div>
           </div> */}
-      <DownloadCard project={project} download={download} long />
+          <DownloadCard project={project} download={download} long />
         </div>
 
         <Link className="project_link" to={link}>
