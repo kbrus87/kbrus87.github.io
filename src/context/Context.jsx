@@ -12,11 +12,11 @@ export function MyProvider({ children }) {
   useEffect(() => {
     axios.get(api + "/projects").then((res) => {
       setProjects(res.data);
+      setTimeout(() => {
+        setLoading(false);
+      }, 850);
     });
 
-    setTimeout(() => {
-      setLoading(false);
-    }, 850);
 
   }, []);
 
