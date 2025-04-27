@@ -4,7 +4,7 @@ import { MyContext } from "../context/Context";
 export default function ContentBlock({ type, content, meta, projectContent }) {
 
     const { api } = useContext(MyContext);
-    return <div className={meta.className + ` mb-5`} style={meta.style}>{projectContent.sort((a, b) => a.order - b.order).map((item) => {
+    return <div className={meta.className + ` mb-5 `} style={meta.style}>{projectContent.sort((a, b) => a.order - b.order).map((item) => {
         const itemMeta = item.meta ?? {}
 
         switch (item.type) {

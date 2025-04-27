@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import dinoWebp from "../../public/images/din3_.webp"
+//import dinoWebp from "../../public/images/din3_.webp"
 
 export default function AwesomSpinner() {
     const [text, setText] = useState("");
@@ -33,7 +33,7 @@ export default function AwesomSpinner() {
         <div className="flex flex-col items-center justify-center min-h-screen bg-black">
             <img
                 // src="/images/dinosaur2no.png"
-                src={dinoWebp}
+                src="/images/din3_.webp"
                 alt="loading"
                 className="w-70 h-70 mb-4"
             />

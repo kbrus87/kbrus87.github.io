@@ -23,6 +23,7 @@ export default function Home() {
             image={mainImageUrl}
             link={`/project/${p.id}`}
             download={download}
+            project={p}
           />
         );
       })}

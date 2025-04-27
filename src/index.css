@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-lg: 1001px;
+}
+
 @font-face {
   font-family: 'Mystery';
   src: url('/fonts/MysteryQuest-Regular.ttf') format('truetype');
@@ -328,4 +332,8 @@ main {
 
 .font-audiowide{
   font-family: 'Audiowide', sans-serif;
+}
+
+.w-250{
+  width: 250px;
 }

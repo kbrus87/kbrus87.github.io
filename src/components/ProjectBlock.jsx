@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import DownloadCard from "./DownloadCard";
 
 export default function ProjectBlock({
   name,
@@ -6,6 +7,7 @@ export default function ProjectBlock({
   description,
   image,
   download,
+  project
 }) {
 
   const handleDownload = () => {
@@ -27,10 +29,10 @@ export default function ProjectBlock({
 
       <div className="project_des_img">
         <div className="project_description">
-          <Link className="project_link" to={link}>
+          <Link className="project_link mb-3" to={link}>
             {description}
           </Link>
-          <div className="project_download">
+          {/* <div className="project_download">
             <div className="project_download-button" onClick={handleDownload}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +44,8 @@ export default function ProjectBlock({
               </svg>
               <p>Download</p>
             </div>
-          </div>
+          </div> */}
+      <DownloadCard project={project} download={download} long />
         </div>
 
         <Link className="project_link" to={link}>

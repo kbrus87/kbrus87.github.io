@@ -2,7 +2,7 @@ import React from "react";
 import { FaWindows, FaApple, FaLinux } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 
-const DownloadCard = ({ project, download }) => {
+const DownloadCard = ({ project, download, long }) => {
     const supportedOS = project.compatible_os.split(",").map((os) => os.trim());
 
     const handleDownload = () => {
@@ -15,16 +15,16 @@ const DownloadCard = ({ project, download }) => {
     };
 
     return (
-        <div style={{width:"400px"}} className="bg-white p-6 rounded-lg shadow-lg max-w-sm">
-            <div className="mb-4">
-                <button onClick={handleDownload} style={{ backgroundColor: "purple" }} className="bg-blue-500 text-white py-2 px-4 rounded-full flex items-center gap-2 w-full">
+        <div className={`bg-white p-2 rounded-lg shadow-lg max-w-sm ${long ? "flex w-full space-x-3 w-fit" : "w-250"}`}>
+            <div className={`${long ? "" : "mb-4"}`}>
+                <button onClick={handleDownload} style={{ backgroundColor: "purple", fontSize: "1rem" }} className="bg-blue-500 text-white py-2 px-4 rounded-full flex items-center gap-2 w-full">
                     <HiDownload />
                     <span>Download {project.name}</span>
                 </button>
             </div>
 
-            <div className="space-y-3 flex justify-around">
-                <div className="flex items-center">
+            <div className={`flex justify-around ${long ? "flex flex-col flex-wrap" : "w-250"}`}>
+                <div className="flex align-center" style={{ fontSize: "0.8rem" }}>
                     <span className="font-medium">OS:</span>
                     <div className="ml-2 flex gap-3">
                         {supportedOS.includes("windows") ? <FaWindows className="text-gray-700" /> : <></>}
@@ -33,7 +33,7 @@ const DownloadCard = ({ project, download }) => {
                     </div>
                 </div>
 
-                <div style={{ display: "flex" }}>
+                <div className="flex align-center" style={{ fontSize: "0.8rem" }}>
                     <span className="font-medium">DAWs: </span>
                     <p className="text-gray-600">{project.hosts}</p>
                 </div>
